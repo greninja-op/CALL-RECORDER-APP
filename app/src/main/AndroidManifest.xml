@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+
+    <application
+        android:name=".UnifiedRecorderApplication"
+        android:allowBackup="true"
+        android:label="Unified Recorder"
+        android:theme="@style/Theme.UnifiedRecorder">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            Internal AccessibilityService that monitors Target_Dialer / Target_VoIP_App
+            in-call windows and surfaces window events to the core (Requirement 1.1).
+            Runtime window-event behavior is device-only / manual verification.
+        -->
+        <service
+            android:name=".adapter.UnifiedAccessibilityService"
+            android:exported="true"
+            android:label="Unified Recorder Call Detection"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_config" />
+        </service>
+
+        <!--
+            Foreground service backing the active-recording indicator (Requirement 2.5).
+            Declared with the microphone foreground-service type; wired to the capture
+            lifecycle by a later task. Runtime behavior is device-only / manual.
+        -->
+        <service
+            android:name=".adapter.RecordingIndicatorService"
+            android:exported="false"
+            android:foregroundServiceType="microphone" />
+    </application>
+</manifest>

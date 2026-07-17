@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unified Recorder</string>
+
+    <!-- Consent (Req 10) -->
+    <string name="consent_title">Legal notice</string>
+    <string name="consent_body">Call recording consent laws vary by jurisdiction. In many places you must inform the other party, or obtain their consent, before recording a call. Complying with the laws that apply where you are is your responsibility. By continuing you confirm that you understand and accept this responsibility.</string>
+    <string name="consent_acknowledge">I understand and accept</string>
+    <string name="consent_dismiss">Not now</string>
+    <string name="consent_view_full">Legal notice</string>
+    <string name="consent_close">Close</string>
+
+    <!-- Onboarding (Req 9) -->
+    <string name="onboarding_title">Set up Unified Recorder</string>
+    <string name="onboarding_storage_heading">1. Choose a storage folder</string>
+    <string name="onboarding_storage_body">Pick a public folder where recordings and their notes will be saved. Files stay in this folder even if you uninstall the app, so you can re-bind the same folder later to restore your history.</string>
+    <string name="onboarding_pick_directory">Choose storage folder</string>
+    <string name="onboarding_directory_bound">Storage folder: %1$s</string>
+    <string name="onboarding_directory_not_bound">No storage folder chosen yet. This step is required.</string>
+
+    <string name="onboarding_accessibility_heading">2. Enable call detection</string>
+    <string name="onboarding_accessibility_body">Unified Recorder detects calls through an Accessibility Service. Enable it so calls can be captured automatically.</string>
+    <string name="onboarding_accessibility_step_1">Open Accessibility settings.</string>
+    <string name="onboarding_accessibility_step_2">Find "Unified Recorder" in the list of services.</string>
+    <string name="onboarding_accessibility_step_3">Toggle the service on and confirm the permission dialog.</string>
+    <string name="onboarding_open_accessibility">Open Accessibility settings</string>
+    <string name="onboarding_accessibility_enabled">Call detection is enabled.</string>
+
+    <string name="onboarding_restricted_heading">Blocked by Restricted Settings?</string>
+    <string name="onboarding_restricted_body">On Android 13 and higher the system may block enabling this service for a sideloaded app. If the toggle is greyed out, clear the restriction from the app info screen.</string>
+    <string name="onboarding_restricted_step_1">Open the app info screen for Unified Recorder.</string>
+    <string name="onboarding_restricted_step_2">Tap the three-dot menu and choose "Allow restricted settings".</string>
+    <string name="onboarding_restricted_step_3">Return to Accessibility settings and enable the service.</string>
+    <string name="onboarding_open_app_info">Open app info</string>
+
+    <string name="onboarding_complete_heading">Setup complete</string>
+    <string name="onboarding_complete_body">Storage is bound and call detection is enabled. You are ready to record.</string>
+    <string name="onboarding_continue">Go to dashboard</string>
+    <string name="onboarding_settings_error">The settings screen could not be opened on this device. You can open it manually from Android Settings.</string>
+
+    <!-- Permissions (Req 8) -->
+    <string name="permission_title">Permissions</string>
+    <string name="permission_intro">These permissions are required for call recording and detection to work.</string>
+    <string name="permission_granted">Granted</string>
+    <string name="permission_not_granted">Not granted</string>
+    <string name="permission_request">Grant permissions</string>
+    <string name="permission_settings_directive">One or more permissions were permanently denied. Enable them from the system app settings screen to continue.</string>
+    <string name="permission_open_settings">Open app settings</string>
+    <string name="permission_continue">Continue</string>
+    <string name="permission_denied_heading">Action needed</string>
+
+    <string name="permission_name_record_audio">Microphone (RECORD_AUDIO)</string>
+    <string name="permission_name_read_phone_state">Phone state (READ_PHONE_STATE)</string>
+    <string name="permission_name_modify_audio_settings">Audio settings (MODIFY_AUDIO_SETTINGS)</string>
+    <string name="permission_name_post_notifications">Notifications (POST_NOTIFICATIONS)</string>
+
+    <!-- Dashboard (Req 5 / 7) -->
+    <string name="dashboard_title">Recordings</string>
+    <string name="dashboard_search_hint">Search name or number</string>
+    <string name="dashboard_filter_calltype">Type</string>
+    <string name="dashboard_filter_direction">Direction</string>
+    <string name="filter_all">All</string>
+    <string name="filter_whatsapp">WhatsApp</string>
+    <string name="filter_cellular">Cellular</string>
+    <string name="filter_incoming">Incoming</string>
+    <string name="filter_outgoing">Outgoing</string>
+
+    <string name="dashboard_empty_default">No recordings yet. Recordings will appear here after your first captured call.</string>
+    <string name="dashboard_empty_filtered">No recordings match the current filters.</string>
+
+    <string name="direction_incoming_symbol">\u2193</string>
+    <string name="direction_outgoing_symbol">\u2191</string>
+    <string name="dashboard_unknown_number">Unknown number</string>
+    <string name="dashboard_unknown_name">Unknown</string>
+    <string name="dashboard_duration_unknown">--:--</string>
+
+    <string name="playback_play">Play</string>
+    <string name="playback_pause">Pause</string>
+    <string name="playback_resume">Resume</string>
+    <string name="playback_stop">Stop</string>
+    <string name="playback_bookmark">Bookmark</string>
+    <string name="playback_error">This recording could not be played.</string>
+
+    <string name="bookmark_title">Add bookmark</string>
+    <string name="bookmark_at">Position: %1$s</string>
+    <string name="bookmark_hint">Note for this moment</string>
+    <string name="bookmark_save">Save</string>
+    <string name="bookmark_cancel">Cancel</string>
+
+    <string name="dashboard_show_consent">Legal notice</string>
+</resources>
